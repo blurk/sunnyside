@@ -11,29 +11,43 @@
 		/>
 		<title>Frontend Mentor | Sunnyside agency landing page</title>
 		<link rel="stylesheet" href="styles.scss" />
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Open+Sans:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Fraunces:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<!-- HEADER START -->
 		<header>
-			<div class="container">
-				<nav>
-					<div class="logo">
-						<strong>sunnyside</strong>
-					</div>
-					<ul>
-						<li>About</li>
-						<li>Services</li>
-						<li>Projects</li>
-					</ul>
-					<button class="button button--cta">Contact</button>
-				</nav>
-			</div>
-		</header>
-		<!-- HEADER END -->
-
-		<!-- HERO SECTION START -->
-		<section class="hero">
-			<h1>WE ARE CREATIVE</h1>
+			<nav class="container nav-container">
+				<div class="logo">
+					<strong>sunnyside</strong>
+				</div>
+				<ul>
+					<li>About</li>
+					<li>Services</li>
+					<li>Projects</li>
+				</ul>
+				<button class="button button--cta">Contact</button>
+				<button class="hamburger">
+					<img src="./images/icon-hamburger.svg" alt="hamburger" />
+				</button>
+			</nav>
+			<!-- HERO SECTION START -->
+			<section class="hero">
+				<h1>WE ARE CREATIVES</h1>
+				<div class="arrow">
+					<img src="./images/icon-arrow-down.svg" alt="down arrow" />
+				</div>
+			</section>
+			<!-- HERO SECTION END -->
 			<picture>
 				<source
 					srcset="./images/mobile/image-header.jpg"
@@ -44,11 +58,10 @@
 					alt="An orange with blue background"
 				/>
 			</picture>
-		</section>
-		<!-- HERO SECTION END -->
+		</header>
+		<!-- HEADER END -->
 
 		<!-- MAIN SECTION START -->
-
 		<main class="container">
 			<!-- ABOUT SECTION START -->
 			<section id="about">
@@ -64,10 +77,32 @@
 						</div>
 						<a href="#" class="btn btn-learn-more">Learn more</a>
 					</div>
-					<div class="feature__image"></div>
+					<div class="feature__image">
+						<picture>
+							<source
+								srcset="./images/mobile/image-transform.jpg"
+								media="(max-width: 640px)"
+							/>
+							<img
+								src="./images/desktop/image-transform.jpg"
+								alt="An egg with yellow background"
+							/>
+						</picture>
+					</div>
 				</div>
 				<div class="feature">
-					<div class="feature__image"></div>
+					<div class="feature__image">
+						<picture>
+							<source
+								srcset="./images/mobile/image-stand-out.jpg"
+								media="(max-width: 640px)"
+							/>
+							<img
+								src="./images/desktop/image-stand-out.jpg"
+								alt="A red cup with red background"
+							/>
+						</picture>
+					</div>
 					<div class="feature__text">
 						<div>
 							<h2>Stand out to the right audience</h2>
@@ -92,6 +127,16 @@
 						underscores your brand message and captures potential clients’
 						attention.
 					</p>
+					<picture>
+						<source
+							srcset="./images/mobile/image-graphic-design.jpg"
+							media="(max-width: 640px)"
+						/>
+						<img
+							src="./images/desktop/image-graphic-design.jpg"
+							alt="A cherry with green background"
+						/>
+					</picture>
 				</div>
 				<div class="service__item">
 					<div class="service__item">
@@ -100,6 +145,16 @@
 							Increase your credibility by getting the most stunning,
 							high-quality photos that improve your business image.
 						</p>
+						<picture>
+							<source
+								srcset="./images/mobile/image-photography.jpg"
+								media="(max-width: 640px)"
+							/>
+							<img
+								src="./images/desktop/image-photography.jpg"
+								alt="An orange with blue background"
+							/>
+						</picture>
 					</div>
 				</div>
 			</section>
@@ -110,7 +165,9 @@
 				<h3>Client testimonials</h3>
 				<div class="testimonials__clients">
 					<div class="client">
-						<div class="avatar"></div>
+						<div class="avatar">
+							<img src="./images/image-emily.jpg" alt="Emily" />
+						</div>
 						<p>
 							We put our trust in Sunnyside and they delivered, making sure our
 							needs were met and deadlines were always hit.
@@ -119,7 +176,9 @@
 						<h5>Marketing Director</h5>
 					</div>
 					<div class="client">
-						<div class="avatar"></div>
+						<div class="avatar">
+							<img src="./images/image-thomas.jpg" alt="Thomas" />
+						</div>
 						<p></p>
 						Sunnyside’s enthusiasm coupled with their keen interest in our
 						brand’s success made it a satisfying and enjoyable experience.
@@ -127,7 +186,9 @@
 						<h5>Chief Operating Officer</h5>
 					</div>
 					<div class="client">
-						<div class="avatar"></div>
+						<div class="avatar">
+							<img src="./images/image-jennie.jpg" alt="Jennie" />
+						</div>
 						<p>
 							Incredible end result! Our sales increased over 400% when we
 							worked with Sunnyside. Highly recommended!
@@ -141,10 +202,46 @@
 
 			<!-- PROJECTS SECTION START -->
 			<section id="projects" class="projects">
-				<picture></picture>
-				<picture></picture>
-				<picture></picture>
-				<picture></picture>
+				<picture>
+					<source
+						srcset="./images/mobile/image-gallery-milkbottles.jpg"
+						media="(max-width: 640px)"
+					/>
+					<img
+						src="./images/desktop/image-gallery-milkbottles.jpg"
+						alt="Milkbottles with sky background"
+					/>
+				</picture>
+				<picture>
+					<source
+						srcset="./images/mobile/image-gallery-orange.jpg"
+						media="(max-width: 640px)"
+					/>
+					<img
+						src="./images/desktop/image-gallery-orange.jpg"
+						alt="an orange in a bow with orange background"
+					/>
+				</picture>
+				<picture>
+					<source
+						srcset="./images/mobile/image-gallery-cone.jpg"
+						media="(max-width: 640px)"
+					/>
+					<img
+						src="./images/desktop/image-gallery-cone.jpg"
+						alt="A cone and blue background"
+					/>
+				</picture>
+				<picture>
+					<source
+						srcset="./images/mobile/image-gallery-sugarcubes.jpg"
+						media="(max-width: 640px)"
+					/>
+					<img
+						src="./images/desktop/image-gallery-sugarcubes.jpg"
+						alt="Sugarcubes with pink background"
+					/>
+				</picture>
 			</section>
 			<!-- PROJECTS SECTION START -->
 		</main>
@@ -161,10 +258,10 @@
 				<a href="#projects">Projects</a>
 			</div>
 			<div class="footer__socials">
-				<img src="" alt="" />
-				<img src="" alt="" />
-				<img src="" alt="" />
-				<img src="" alt="" />
+				<img src="./images/icon-facebook.svg" alt="facebook" />
+				<img src="./images/icon-instagram.svg" alt="instagram" />
+				<img src="./images/icon-twitter.svg" alt="twitter" />
+				<img src="./images/icon-pinterest.svg" alt="pinterest" />
 			</div>
 		</footer>
 		<!-- FOOTER SECTION END -->

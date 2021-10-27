@@ -1,15 +1,24 @@
 @import './reset.scss';
 @import '_variables.scss';
 
+:root {
+	font-size: #{$base-font-size}+ px;
+}
+
+@function toRem($value) {
+	$remValue: ($value / $base-font-size) + rem;
+	@return $remValue;
+}
+
 html,
 body {
-	font-size: 16px;
+	font-size: toRem(18);
 }
 
 .container {
 	margin: 0 auto;
 	width: 100%;
-	padding: 1.25rem;
+	padding: 0 toRem(20);
 
 	@media only screen and (max-width: $xs) {
 		max-width: $xs;
@@ -25,5 +34,57 @@ body {
 	}
 	@media only screen and (max-width: $xl) {
 		max-width: $xl;
+	}
+}
+header {
+	display: grid;
+	color: $color-neutral-white;
+
+	& > * {
+		grid-area: 1/-1;
+	}
+
+	.nav-container {
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-height: 10vh;
+		font-family: $font-barlow;
+		.logo {
+			font-size: toRem(32);
+			letter-spacing: 1px;
+			strong {
+				font-weight: 800;
+			}
+		}
+
+		ul {
+			display: flex;
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
+
+	section.hero {
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			font-family: $font-fraunces;
+			font-size: toRem(72);
+			letter-spacing: 16px;
+			font-weight: 900;
+		}
+	}
+
+	& > img {
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
